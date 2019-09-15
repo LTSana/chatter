@@ -1,4 +1,4 @@
-# Project 2
+# Chatter
 
 This Project allows users to chat in channels using Javascript and Python 3.5+
 
