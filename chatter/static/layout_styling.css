@@ -1,0 +1,22 @@
+/* Styling for the Layout */
+.navbar {
+  background-color: rgba(255, 229, 159, 0.671); }
+
+a {
+  font-family: 'Dekko';
+  font-size: 130%; }
+
+.logo {
+  width: 3%; }
+
+.app_title {
+  margin-left: -83%; }
+
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 10%; }
+
+  .app_title {
+    margin-left: 0%; } }
+
+/*# sourceMappingURL=layout_styling.css.map */

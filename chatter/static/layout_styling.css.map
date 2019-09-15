@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,4BAA4B;AAE5B,OAAQ;EACP,gBAAgB,EAAE,0BACnB;;AAEA,CAAE;EACD,WAAW,EAAE,OAAO;EACpB,SAAS,EAAE,IAAI;;AAGhB,KAAM;EACL,KAAK,EAAE,EAAE;;AAGV,UAAW;EACV,WAAW,EAAE,IAAI;;AAGlB,oCAAqC;EACpC,KAAM;IACL,KAAK,EAAE,GAAG;;EAEX,UAAW;IACV,WAAW,EAAE,EAAE",
+"sources": ["layout_styling.scss"],
+"names": [],
+"file": "layout_styling.css"
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block title %}
+	Chatter Home
+{% endblock %}
+
+{% block body %}
+	<!-- Custom fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
+
+	<!-- index CSS -->
+	<link href="/static/index_styling.css" rel="stylesheet">
+
+	<!-- Index Script -->
+	<script src="/static/index_script.js"></script>
+	<br>
+	<div class="container">
+		<span id="available_chatter">
+			<div>
+				<h3>Your handle: <span id="username"></span></h3>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-sm">
+					<span id="available_channel">Available Channels</span>
+					<button class="btn refresh" onclick="refresh_channels()">Refresh</button>
+					<button class="btn" id="create_channel">+ Create Channel</button>
+				</div>
+			</div>
+			<div class="col-sm" id="create_channel_input_field">
+
+			</div>
+			&nbsp;
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active" id="available-tab" data-toggle="tab" href="#available" role="tab" aria-controls="available" aria-selected="true">Available Channels</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="recent-tab" data-toggle="tab" href="#recent" role="tab" aria-controls="recent" aria-selected="false">Recently Visited Channels</a>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="available" role="tabpanel" aria-labelledby="available-tab">
+				
+					<div id="channel_list">
+						{% if channel_list %}
+							{% for alpha in range(channel_list|length) %}
+								<div class="row card">
+									<div>
+										<span class="col-sm">
+											<a href="/channel_name/{{channel_list[alpha]}}" id="channel_name">{{channel_list[alpha]}}</a>
+										</span>
+										<span class="float-right">
+											<a href="/channel_name/{{channel_list[alpha]}}"><button class="btn btn-dark join_channel">JOIN CHANNEL</button></a>
+										</span>
+									</div>
+								</div>
+							{% endfor %}
+						{% endif %}
+					</div>
+				
+				</div>
+				<div class="tab-pane fade show" id="recent" role="tabpanel" aria-labelledby="recent-tab">
+				
+					<div id="channel_list_visited">
+						<!-- Javascript will place the visited channels here -->
+					</div>
+				
+				</div>
+			</div>
+		</span>
+	</div>
+{% endblock %}
