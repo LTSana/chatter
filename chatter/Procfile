@@ -1,1 +1,1 @@
-web pip install -r requirements.txt && python application.py
+web gunicorn -k flask_sockets.worker application:app && pip install -r requirements.txt
