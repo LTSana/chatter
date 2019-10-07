@@ -1,1 +1,1 @@
-web gunicorn -k flask_sockets.worker application:app && pip install -r requirements.txt
+web gunicorn --worker-class socketio.sgunicorn.GeventSocketIOWorker --log-file=- server:app && pip install -r requirements.txt
