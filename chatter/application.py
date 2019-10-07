@@ -9,7 +9,7 @@ from flask_socketio import SocketIO, emit
 from chat_bot import bot
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
+app.config["SECRET_KEY"] = "klhakhgkjdfhglfkmkw3kl4jh54l3jkb234kn"
 socketio = SocketIO(app)
 
 system_data = {"channel_names": ['General']}
